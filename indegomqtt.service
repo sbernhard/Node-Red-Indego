@@ -1,0 +1,15 @@
+[Unit]
+Description=Indego MQTT Service
+
+[Service]
+ExecStart=/opt/indego/bin/IndegoMqttAdapter -c /opt/indego/IndegoMqttAdapterConfig.properties
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=indego
+KillMode=process
+User=pi
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
