@@ -1,6 +1,6 @@
 # Connect your Bosch Indego with MQTT to Loxone
 
-This is not a step-by-step howto. You should read some howtos to mosquitto and node-red to get it working and do understand it.
+This is not a step-by-step howto. You should read some howtos to mosquitto and node-red to get it working and understand it.
 
 ## USE AT YOUR OWN RISK
 
@@ -34,9 +34,13 @@ Node-RED is installed on a Raspberry Pi - of course :-)
 - Deploy the Node-RED flow
 - Afterwards you should be able to get the Indego state by using http://node-red-ip-address:1880/indego/status
 
+![Indego Flow](/IndegoMqtt.png)
+
 ## Loxone Configuration
 - Add a virtual input to receive the Indego mode_code, error and the completed state
 - Add virtual output to send the commands to mow, pause and return
+
+![Loxone Indego](/indego-loxone.png)
 
 # Thanks
 Thanks to all the great Open Source components - mosquitto, node-red-contrib-httpauth and Node-RED. 
